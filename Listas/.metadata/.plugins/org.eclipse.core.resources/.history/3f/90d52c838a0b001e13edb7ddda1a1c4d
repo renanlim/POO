@@ -1,0 +1,14 @@
+package br.com.astronauta.p2;
+
+import java.util.*;
+
+public class Utils {
+	
+	public static boolean existe(Collection<CorpoCeleste> x, CorpoCeleste y) {
+		return x.contains(y);
+	}
+	
+	public static void ordena(List<CorpoCeleste> x) {
+		Collections.sort(x);
+	}
+}

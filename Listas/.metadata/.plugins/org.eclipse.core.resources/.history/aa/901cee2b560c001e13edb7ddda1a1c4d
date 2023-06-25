@@ -1,0 +1,33 @@
+package produto;
+import java.util.*;
+
+public class Utils {
+	public static boolean existe(List x, Produto y) {
+		return x.contains(y);
+	}
+	public static List getLista() {
+		List lista = new ArrayList();
+		lista.add("casa");
+		Televisao t = new Televisao();
+		t.setId("123");
+		lista.add(t);
+		t = new Televisao();
+		t.setId("456");
+		lista.add(t);
+		t = new Televisao();
+		t.setId("789");
+		lista.add(t);
+		Tapete t2=new Tapete();
+		t2.setId("abc");
+		lista.add(t2);
+		t2=new Tapete();
+		t2.setId("def");
+		lista.add(t2);
+		t2=new Tapete();
+		t2.setId("ghi");
+		lista.add(t2);
+		lista.add("abcdef");
+		
+		return lista;
+	}
+}

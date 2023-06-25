@@ -1,0 +1,18 @@
+package br.com.ninja;
+import java.util.*;
+
+public class UtilsPalavrao {
+	public static void verifica(String texto) throws TextoCurtoException {
+        if (texto.length() < 10) {
+            throw new TextoCurtoException("Texto inserido com " + texto.length() + " caracteres.");
+        }
+    }
+
+    public static String moderar(String texto) {
+        Set<String> palavroes = getPalavroes();
+        for (String palavrão : palavroes) {
+            texto = texto.replaceAll("(?i)" + palavrão, "#".repeat(palavrão.length()));
+        }
+        return texto;
+    }
+}

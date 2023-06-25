@@ -1,0 +1,9 @@
+package br.com.ninja;
+
+public class TextoCurtoExceptions extends Exception {
+	public TextoCurtoException(int tam) {
+		super("texto inserido com "+tam+" caracteres");
+	}
+	public TextoCurtoException() {
+	}
+}

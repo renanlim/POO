@@ -1,0 +1,105 @@
+Diferença entre protected e default
+
+Se(mesmo package)
+	voce consegue acessar
+Se não
+	não consegue acessar o default, mas o protected (só se a classe extender da que possui os métodos)
+	
+Conclusão: o metodo default só funciona se estiver no mesmo pacote, fora isso, ele só consegue ser visualizado
+se for instânciado com a class que possui os método; extendido; ou importado.
+
+///////////////////////////////////////////////
+
+public static final double PI;
+public static final String DIRETORIO_RAIZ = "d:/"; 
+-->	static: É UMA CONSTANTE; PADRÃO: TUDO EM CAIXA ALTA;
+--> final: palavra reservada; USO: marca que a variável é constante e pode ser usada em métodos 
+ex.: public class Urso{
+		public final void CORRER(){
+	}
+}
+Conclusão: Posso extender urso, mas não podemos sobrescrever o metodo correro porque ele é final
+
+ex.: public final class Mamute{
+		public final void CORRER(){
+	}
+}
+Conclusão: Ninguem pode extender essa classe porque ela é final
+
+Conclusão: A classe String não pode ser extendida porque ela é final
+
+////////////////////////////////////////////////////
+
+Classe abstrata --> Para entender bem podemos pensar em um exemplo de um zoologico, onde há o cadastratamento
+de varios animais. Pergunta? É possivel cadastrar uma classe Animal? NÃO, logo temos um bom indicativo de que
+essa classe é uma classe abstrata
+
+ex.: public abstract class Animal{
+	public final void CORRER(){ // metodo concreto
+	}
+	public abstract void CORRER(); //termina com ; e todo sub-classe concreta que extender a classe abstrata é
+	obrigada a implementar todos os metodos abstratos que estão em animal 
+	
+	public abstract void MAMAR();
+	
+	public class Elefante extends Animal(){ //a classe elefante é obrigada a implementar(porque não tem comportamento) o metodo correr, mamar
+	e não obrigado a sobrescrever o metodo crescer (que é um metodo concreto)
+	}
+	
+	public class Peixe extends Animal{//Problema: peixe não corre e nem mama
+	
+	public interface Corredor{
+		public Abstract void correr();
+	}
+	
+	Solução: separar o metodo correr em mamar em um classe, porém teriamos um classe extendendo outras duas.
+	Para resolver isso, criamos uma interface
+	
+	public class Gorila extends Animal implements Corredor{
+	
+	}
+	
+	Importante: Se houver pelo menos um metodo abstrato, a classe é obrigada a ser abstrata
+}
+
+Erros possiveis:
+	Animal A = new Animal(); //erro ao instanciair uma classe abstrata
+	
+Excessão:
+	Animal x [] = new Animal[3] //Aqui estamos criando um array com posições que vão ser preenchidos
+	com o objeto. Isso não cria nas 3 posições do tipo vetor um objeto do tipo animal, mas sim
+	3 posicoes com valor null.
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+ArrayList  --> lista de array, é uma coleção
+ArrayList é uma List e uma List uma Collection
+
+SetConjunt
+
+LinkedList --> lista encadeada
+
+Importante: Precisa implementar List
+
+.size() --> ArrayList
+
+"abc".length() --> tamanho de string
+
+.length --> array normal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

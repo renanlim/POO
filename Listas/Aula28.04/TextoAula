@@ -1,0 +1,4 @@
+////////////////////// Object.equals /////////////////////
+main(){
+	ArrayList x = new ArrayList();
+	

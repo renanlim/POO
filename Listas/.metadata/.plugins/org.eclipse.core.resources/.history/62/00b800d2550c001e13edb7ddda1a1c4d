@@ -1,0 +1,7 @@
+package produto;
+
+public class Televisao extends Produto {
+	public void ligavel() {
+		
+	}
+}

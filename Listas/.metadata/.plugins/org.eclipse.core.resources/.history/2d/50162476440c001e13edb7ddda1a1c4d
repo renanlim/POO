@@ -1,0 +1,12 @@
+package br.com.ninja;
+import java.util.*;
+
+public class Utilidades {
+	public static Set getPalavroes() {
+		Set conjunto = new HashSet();
+		conjunto.add("palavrao1");
+		conjunto.add("palavrao2");
+		conjunto.add("palavrao3");
+		return conjunto;
+	}
+}
